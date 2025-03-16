@@ -1,40 +1,17 @@
 import {  Button, ConfigProvider, Layout } from 'antd';
-import { Content } from 'antd/es/layout/layout';
+
 import { MenuBar, App_Footer } from './Shared/Components';
 import { Environment } from './Shared/Environment';
 import Link from 'antd/es/typography/Link';
-
-const theme = {
-  token: {
-    colorPrimary: 'none',
-    colorText: 'white',
-    colorBgContainer: Environment.BASE_COLOR,
-  },
-  components: {
-    Header: {
-
-    },
-    Link: {
-    }
-  },
-};
-
-const contentStyle = {
-  flex: 1,
-  padding: '20px',
-  backgroundColor: 'black',
-  height: '10000px',
-  paddingTop: '0px',
-};
+import { Home } from './Pages/Home';
+import { theme } from './Shared/Theme';
 
 function App() {
   return (
     <ConfigProvider theme={theme}>
-      <Layout style={{ height: '100vh' }}>
+      <Layout style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'black' }}>
         <MenuBar />
-
-        <Content style={contentStyle}>Content</Content>
-
+          <Home />
         <App_Footer />
       </Layout>
     </ConfigProvider>
