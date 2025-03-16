@@ -1,9 +1,13 @@
+import { Environment } from '../Environment';
+
 export const theme = {
     token: {
-        colorPrimary: 'none',
         colorText: 'white',
-        colorBgContainer: "#82010B",
+        colorBgContainer: Environment.BASE_COLOR,
     },
     components: {
+        Menu: {
+            horizontalItemSelectedColor: '#C7151A',
+        },
     },
 };
