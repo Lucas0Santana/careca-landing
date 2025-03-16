@@ -3,7 +3,6 @@
 import useApp from "./useApp";
 import { Avatar, Menu } from 'antd';
 
-
 export const MenuBar = () => {
     const {
       headerStyle,
@@ -18,7 +17,7 @@ export const MenuBar = () => {
         <Header style={headerStyle}>
           <div style={menuContainerStyle}>
             <Menu mode="horizontal" items={itemsLeft} style={menuStyle} />
-            <Avatar size={160} src={logo} alt="Logo" style={logoStyle} />
+            <img src={logo} alt="Logo" style={logoStyle} />
             <Menu mode="horizontal" items={itemsRight} style={menuStyle} />
           </div>
         </Header>
