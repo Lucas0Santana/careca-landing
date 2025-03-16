@@ -24,12 +24,15 @@ export default function useApp() {
         display: 'flex',
         justifyContent: 'center',
         height: '100%',
+        fontSize: '24px',
+
     };
     const menuContainerStyle = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         width: '100%',
+        // fontSize: '28px',
     };
 
     const itemsLeft = [

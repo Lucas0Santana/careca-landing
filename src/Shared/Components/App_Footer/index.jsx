@@ -19,6 +19,8 @@ export const App_Footer = () => {
 
     const colStyle = {
         fontSize: '18px',
+        width: '100%',
+        marginRight: '50%',
     }
 
     const imgStyle = {
@@ -27,7 +29,7 @@ export const App_Footer = () => {
 
     return (
         <Footer style={style}>
-            <Row gutter={48} align={'middle'} style={{ fontSize: '18px' }}>
+            <Row  gutter={100} align={'middle'} style={{ fontSize: '18px' }}>
                 <Col>
                     <img src={logo} alt="" style={imgStyle} />
                     {/* <Avatar size={200} style={{ padding: '25px', }} src={logo} alt="Logo"></Avatar> */}
