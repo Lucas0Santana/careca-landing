@@ -9,13 +9,19 @@ export default function useApp() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        position: 'fixed',
+        zIndex: 10000,
+        width: '100%',
     };
 
     const logoStyle = 
     {
         marginTop: '50px',
-        padding: '20px',
+        padding: '15px',
         backgroundColor: Environment.BASE_COLOR,
+        width: '200px',
+        zIndex: 1,
+        borderRadius: '40%',
     };
 
     const menuStyle = 
@@ -25,7 +31,6 @@ export default function useApp() {
         justifyContent: 'center',
         height: '100%',
         fontSize: '24px',
-
     };
     const menuContainerStyle = {
         display: 'flex',
