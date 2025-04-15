@@ -3,6 +3,7 @@ import { Carrossel } from '../../Shared/Components/Carrossel';
 import { Typography, Avatar } from 'antd';
 import { ArrowRightOutlined, BookOutlined } from '@ant-design/icons';
 import careca from '../../Shared/Images/Home/image 3.png';
+import { useNavigate } from "react-router-dom"
 
 const contentStyle = {
     flex: 1,
@@ -42,6 +43,7 @@ const btnCardapio = {
     fontSize: '24px',
     padding: '20px',
     borderRadius: '90px',
+    cursor: 'pointer',
 }
 
 const containerHistoria = {
@@ -53,7 +55,7 @@ const containerHistoria = {
 }
 
 export const Home = () => {
-
+    const navigate = useNavigate();
     return (
         <Content style={contentStyle} >
             <div style={{justifyContent: 'center', alignItems: 'center', height: '100vh', }}>
@@ -66,7 +68,7 @@ export const Home = () => {
                         <Typography style={tituloCardapio}> Conheça Nosso Cardápio! </Typography>
                     </div>
                     <div>
-                        <button style={btnCardapio}><BookOutlined /> CARDÁPIO <ArrowRightOutlined /></button>
+                        <button style={btnCardapio} onClick={() => navigate('/cardapio')}><BookOutlined /> CARDÁPIO <ArrowRightOutlined /></button>
                     </div>
                 </div>
 
