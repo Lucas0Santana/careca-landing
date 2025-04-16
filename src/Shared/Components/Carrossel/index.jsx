@@ -44,7 +44,6 @@ export const Carrossel = () => {
             arrows
             waitForAnimate
             fade
-            dots={estiloDots}
         >
             {(carrosselProps.map((props, index) => (
                 <Personalized_card

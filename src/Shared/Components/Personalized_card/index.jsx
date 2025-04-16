@@ -1,10 +1,11 @@
 import { Typography, Card, Flex, Image, Row, Col } from 'antd';
+import { Environment } from "../../Environment";
 
 export const Personalized_card = ({ pizza, ingredientes, img_pizza }) => {
     const cardStyle = {
         width: 620,
         height: 200,
-        backgroundColor: 'blue',
+        backgroundColor: Environment.BACKGROUND_COLOR,
     };
 
     return (
