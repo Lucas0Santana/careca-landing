@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 8%;
+}
+
+.botao, .botaoAtivo{
+  background-color: #174E23;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.botaoAtivo {
+  background-color: #0B2711;
+  transition: 1s;
+}
+
+.botao:hover, .botaoAtivo:hover {
+  background-color: #0E3A16;
+  transition: 1.25s;
+}
+
+.btnContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+.tabela thead th {
+  background-color: #174E23;
+  color: white;
+  padding: 16px;
+  text-align: left;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.tabela td {
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.containerSabores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  column-gap: 200px;
+  
+}
+
+.containerSabores h4 {
+  font-size: 24px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.containerSabores p {
+  font-size: 18px;
+  font-weight: 50;
+}
+
+.tituloSabores {
+  text-align: center;
+  font-weight: 100;
+  font-size: 48px;
+}
+
+span {
+  pointer-events: none; 
+}
