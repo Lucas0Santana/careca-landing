@@ -1,128 +1,229 @@
 import { useState } from "react";
+import styles from './Cardapio.module.css';
+import { SaboresCardapio } from "./SaboresCardapio.jsx";
+import { TableCardapio } from "./TableCardapio.jsx";
 
-const containerCardapio = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'left',
-    height: '100vh',
-    padding: '8%',
-}
 
-const buttonStyle = {
-    backgroundColor: '#174E23',
-    border: 'none',
-    color: 'white',
-    fontSize: '24px',
-    padding: '20px',
-    borderRadius: '90px',
-    marginTop: '10%',
-    cursor: 'pointer',
-}
+document.title = "Cardápio - Pizzaria do Careca";
 
 export const Cardapio = () => {
     const [tradicional, setTradicional] = useState(true);
 
+    const pizzasTradicionaisProps = [
+        {
+            tamanho: 'Pequena',
+            qtdeSabores: '2 sabores',
+            qtdeFatias: '4 fatias',
+            preco: 'R$ 30,00'
+        },
+        {
+            tamanho: 'Media',
+            qtdeSabores: '2 sabores',
+            qtdeFatias: '6 fatias',
+            preco: 'R$ 43,00'
+        },
+        {
+            tamanho: 'Grande',
+            qtdeSabores: '3 sabores',
+            qtdeFatias: '8 fatias',
+            preco: 'R$ 52,00'
+        },
+        {
+            tamanho: 'Família',
+            qtdeSabores: '4 sabores',
+            qtdeFatias: '12 fatias',
+            preco: 'R$ 70,00'
+        },
+    ]
+
+    const pizzasEspeciaisProps = [
+        {
+            tamanho: 'Pequena',
+            qtdeSabores: '2 sabores',
+            qtdeFatias: '4 fatias',
+            preco: 'R$ 30,00'
+        },
+        {
+            tamanho: 'Media',
+            qtdeSabores: '2 sabores',
+            qtdeFatias: '6 fatias',
+            preco: 'R$ 51,00'
+        },
+        {
+            tamanho: 'Grande',
+            qtdeSabores: '3 sabores',
+            qtdeFatias: '8 fatias',
+            preco: 'R$ 64,00'
+        },
+        {
+            tamanho: 'Família',
+            qtdeSabores: '4 sabores',
+            qtdeFatias: '12 fatias',
+            preco: 'R$ 85,00'
+        },
+    ]
+
+    const saboresTradicionais = [
+        {
+            sabor: "Calabresa 1",
+            ingredientes: "Mussarela, calabresa, azeitona e orégano"
+        },
+        {
+            sabor: "Calabresa 2",
+            ingredientes: "Mussarela, calabresa, cebola, tomate, azeitona e orégano"
+        },
+        {
+            sabor: "Calabresa catupiry",
+            ingredientes: "Mussarela, calabresa, catupiry, azeitona e orégano"
+        },
+        {
+            sabor: "Calabresa cheddar",
+            ingredientes: "Mussarela, calabresa, cheddar, azeitona e orégano"
+        },
+        {
+            sabor: "Mussarela",
+            ingredientes: "Mussarela, tomate, azeitona e orégano"
+        },
+        {
+            sabor: "Portuguesa",
+            ingredientes: "Mussarela, presunto, ovo mexidos, tomate, cebola, pimentão, azeitona e orégano"
+        },
+        {
+            sabor: "Frango",
+            ingredientes: "Mussarela, frango, azeitona e orégano"
+        },
+        {
+            sabor: "Frango catupiry",
+            ingredientes: "Mussarela, frango, catupiry, azeitona e orégano"
+        },
+        {
+            sabor: "Frango cheddar",
+            ingredientes: "Mussarela, frango, cheddar, azeitona e orégano"
+        },
+        {
+            sabor: "Milho",
+            ingredientes: "Mussarela, milho, azeitona e orégano"
+        },
+        {
+            sabor: "Baiana",
+            ingredientes: "Mussarela, calabresa triturada, cebola, pimenta calabresa, pimenta biquinho, azeitona e orégano"
+        },
+        {
+            sabor: "2 Queijos",
+            ingredientes: "Mussarela, parmesão, azeitona e orégano"
+        },
+        {
+            sabor: "3 Queijos",
+            ingredientes: "Mussarela, parmesão, catupiry, azeitona e orégano"
+        },
+        {
+            sabor: "4 Queijos",
+            ingredientes: "Mussarela, parmesão, catupiry, cheddar, azeitona e orégano"
+        },
+        {
+            sabor: "A Moda da Casa 1",
+            ingredientes: "Mussarela, presunto, calabresa, cebola, azeitona, catupiry, cheddar e orégano"
+        },
+        {
+            sabor: "A Moda da Casa 2",
+            ingredientes: "Mussarela, presunto triturado, cebola, milho, ervilha, cheddar, azeitona e orégano"
+        },
+        {
+            sabor: "Margherita",
+            ingredientes: "Mussarela, tomate, manjericão, azeitona e orégano"
+        },
+        {
+            sabor: "Presunto",
+            ingredientes: "Mussarela, presunto, cebola, azeitona e orégano"
+        }
+    ]
+
+    const saboresEspeciais = [
+        {
+            sabor: "Bacon",
+            ingredientes: "Mussarela, bacon, azeitona e orégano"
+        },
+        {
+            sabor: "Charque",
+            ingredientes: "Mussarela, charque, cebola, azeitona e orégano"
+        },
+        {
+            sabor: "Charque catupiry",
+            ingredientes: "Mussarela, charque, catupiry, azeitona e orégano"
+        },
+        {
+            sabor: "Camarão 1",
+            ingredientes: "Mussarela, camarão, azeitona e orégano"
+        },
+        {
+            sabor: "Camarão 2",
+            ingredientes: "Mussarela, camarão, catupiry, azeitona e orégano"
+        },
+        {
+            sabor: "Camarão 3",
+            ingredientes: "Mussarela, camarão, cheddar, azeitona e orégano"
+        },
+        {
+            sabor: "Carne do Sol 1",
+            ingredientes: "Mussarela, carne do sol, cebola, azeitona e orégano"
+        },
+        {
+            sabor: "Carne do Sol 2",
+            ingredientes: "Mussarela, carne do sol, catupiry, azeitona e orégano"
+        },
+        {
+            sabor: "Salaminho",
+            ingredientes: "Mussarela, salaminho, cebola, azeitona e orégano"
+        },
+        {
+            sabor: "Pepperoni",
+            ingredientes: "Mussarela, pepperoni, azeitona e orégano"
+        },
+        {
+            sabor: "Peppercheddar",
+            ingredientes: "Mussarela, pepperoni, cheddar, azeitona e orégano"
+        },
+        {
+            sabor: "Catupperoni",
+            ingredientes: "Mussarela, pepperoni, catupiry, azeitona e orégano"
+        },
+        {
+            sabor: "Atum",
+            ingredientes: "Mussarela, atum, cebola, azeitona e orégano"
+        },
+        {
+            sabor: "Atum catupiry",
+            ingredientes: "Mussarela, atum, catupiry, azeitona e orégano"
+        },
+        {
+            sabor: "Lombinho",
+            ingredientes: "Mussarela, lombinho, cebola, azeitona e orégano"
+        },
+        {
+            sabor: "Lombinho catupiry",
+            ingredientes: "Mussarela, lombinho, catupiry, azeitona e orégano"
+        }
+    ]
+
 
     return (
-        <div style={containerCardapio}>
+        <div className={styles.container}>
 
-            <h1 style={{ fontSize: '48px', color: "white" }}>Cardápio</h1>
+            {/* <h1 style={{ fontSize: '48px', color: "white", fontWeight: "100" }}>Cardápio</h1> */}
 
-            <div style={{ width: '100vh', display: 'flex', justifyContent: 'left', gap: '20px' }}>
-                <button type="submit" style={buttonStyle} onClick={() => setTradicional(true)}>Tradicional</button>
-                <button type="submit" style={buttonStyle} onClick={() => setTradicional(false)}>Especial</button>
+            <div className={styles.btnContainer} >
+                <button title="Tradicionais" className={tradicional ? styles.botaoAtivo : styles.botao} onClick={() => setTradicional(true)}> Tradicional </button>
+                <button className={!tradicional ? styles.botaoAtivo : styles.botao} onClick={() => setTradicional(false)}>Especiais</button>
             </div>
 
-            {tradicional ? (
+            <div>
                 <div>
-                    <div>
-                        {/* <h3>Tamanhos</h3> */}
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Tamanho</th>
-                                    <th>Sabores</th>
-                                    <th>Fatias</th>
-                                    <th>Preço</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Pequena</td>
-                                    <td>2 Sabores</td>
-                                    <td>4 Fatias</td>
-                                    <td>R$ 28,00</td>
-                                </tr>
-                                <tr>
-                                    <td>Média</td>
-                                    <td>2 Sabores</td>
-                                    <td>6 Fatias</td>
-                                    <td>R$ 37,00</td>
-                                </tr>
-                                <tr>
-                                    <td>Grande</td>
-                                    <td>2 Sabores</td>
-                                    <td>6 Fatias</td>
-                                    <td>R$ 37,00</td>
-                                </tr>
-                                <tr>
-                                    <td>Família</td>
-                                    <td>2 Sabores</td>
-                                    <td>6 Fatias</td>
-                                    <td>R$ 37,00</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                        <div style={{padding: "0px"}}>
-                            <h2>Sabores</h2>
-                            <div style={{display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: "20px"}}>
-                                <div>
-                                    <h4>Portuguesa</h4>
-                                    <p>Mussarela, Presunto, ovos, pimentão, cebola, tomate e orégano.</p>
-                                </div>
-                                <div>
-                                    <h4>Portuguesa</h4>
-                                    <p>Mussarela, Presunto, ovos, pimentão, cebola, tomate e orégano.</p>
-                                </div>
-                                <div>
-                                    <h4>Portuguesa</h4>
-                                    <p>Mussarela, Presunto, ovos, pimentão, cebola, tomate e orégano.</p>
-                                </div>
-                                <div>
-                                    <h4>Portuguesa</h4>
-                                    <p>Mussarela, Presunto, ovos, pimentão, cebola, tomate e orégano.</p>
-                                </div>
-                                <div>
-                                    <h4>Portuguesa</h4>
-                                    <p>Mussarela, Presunto, ovos, pimentão, cebola, tomate e orégano.</p>
-                                </div>
-                                <div>
-                                    <h4>Portuguesa</h4>
-                                    <p>Mussarela, Presunto, ovos, pimentão, cebola, tomate e orégano.</p>
-                                </div>
-                                <div>
-                                    <h4>Portuguesa</h4>
-                                    <p>Mussarela, Presunto, ovos, pimentão, cebola, tomate e orégano.</p>
-                                </div>
-                              
-                            </div>
-                        </div>
-
-                    </div>
+                    <TableCardapio cardapio={tradicional ? pizzasTradicionaisProps : pizzasEspeciaisProps} />
                 </div>
-            ) : (
                 <div>
-                    <div>
-                        <h3>Valores Especiais</h3>
-                    </div>
-                    <div>
-                        <h4>Sabores Especiais</h4>
-                    </div>
+                    <SaboresCardapio sabores={tradicional ? saboresTradicionais : saboresEspeciais}/>
                 </div>
-            )}
+            </div>
         </div>
     );
 }
