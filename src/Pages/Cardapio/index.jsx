@@ -209,7 +209,7 @@ export const Cardapio = () => {
     return (
         <div className={styles.container}>
 
-            {/* <h1 style={{ fontSize: '48px', color: "white", fontWeight: "100" }}>Cardápio</h1> */}
+            <h1 style={{ fontSize: '48px', color: "white", fontWeight: "100" }}>Cardápio</h1>
 
             <div className={styles.btnContainer} >
                 <button title="Tradicionais" className={tradicional ? styles.botaoAtivo : styles.botao} onClick={() => setTradicional(true)}> Tradicional </button>
