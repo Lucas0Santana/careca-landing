@@ -1,11 +1,10 @@
-import { theme } from './Shared/Theme';
 import ptBR from 'antd/locale/pt_BR.js';
+import { theme } from './Shared/Theme';
 
 import { ConfigProvider, Layout } from 'antd';
-import { MenuBar, App_Footer } from './Shared/Components';
-import { AppRoutes } from './Routes';
-import { Home } from './Pages/Home';
 import { BrowserRouter } from 'react-router-dom';
+import { AppRoutes } from './Routes';
+import { App_Footer, MenuBar } from './Shared/Components';
 
 
 function App() {
