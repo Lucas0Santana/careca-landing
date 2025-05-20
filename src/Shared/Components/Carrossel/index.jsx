@@ -1,8 +1,7 @@
-import React from 'react';
 import { Carousel } from 'antd';
 import { Personalized_card } from '../Personalized_card';
 
-import { camarao, brigadeiro, quatroQueijos } from "../../Images/Pizzas";
+import { brigadeiro, camarao, quatroQueijos } from "../../Images/Pizzas";
 
 export const Carrossel = () => {
 
@@ -33,7 +32,6 @@ export const Carrossel = () => {
         <Carousel
             style={{
                 width: "620px",
-                // height: "300px",
                 margin: "0 auto",
                 borderRadius: "10px",
                 overflow: "hidden",

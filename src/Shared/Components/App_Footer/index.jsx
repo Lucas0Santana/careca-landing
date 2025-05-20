@@ -1,9 +1,9 @@
-import logo from "../../Images/marcacareca_1.png"
-import { Avatar, Col, Row, Typography } from "antd"
+import { InstagramOutlined, PhoneOutlined, WhatsAppOutlined } from "@ant-design/icons"
+import { Col, Row, Typography } from "antd"
 import { Footer } from "antd/es/layout/layout"
 import Link from "antd/es/typography/Link"
 import { Environment } from "../../Environment"
-import { InstagramOutlined, PhoneOutlined, WhatsAppOutlined } from "@ant-design/icons"
+import logo from "../../Images/marcacareca_1.png"
 
 export const App_Footer = () => {
 

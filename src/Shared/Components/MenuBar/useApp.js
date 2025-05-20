@@ -31,6 +31,7 @@ export default function useApp() {
         justifyContent: 'center',
         height: '100%',
         fontSize: '24px',
+        border: 'none',
     };
     const menuContainerStyle = {
         display: 'flex',
