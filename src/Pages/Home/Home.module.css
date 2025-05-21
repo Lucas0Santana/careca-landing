@@ -1,0 +1,99 @@
+.contentStyle {
+    flex: 1;
+    padding: 20px;
+    background-color: black;
+    margin-top: 5%;
+    background: linear-gradient(to bottom, #000000, rgb(8, 0, 0));
+    width: 100%;
+}
+
+.containerCarrossel {
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin-top: 7%;
+    border: none;
+}
+
+.btnCardapio {
+    background-color: #174E23;
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 90px;
+    cursor: pointer;
+}
+
+.sectionContainer {
+    display: flex;
+    justify-content: space-evenly !important;
+    align-items: center;
+    margin-top: 5%;
+    padding: 0 60px;
+    width: 100%;
+}
+
+.sectionContent {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tituloSecao {
+    font-size: 36px;
+    font-family: Georgia, serif;
+    color: white;
+}
+
+.textoHistoria {
+    font-size: 20px;
+    text-align: justify;
+    margin-top: 18px;
+    color: white;
+    font-family: Georgia, serif;
+    max-width: 600px;
+}
+
+.legendaAvatar {
+    text-align: center;
+    margin-top: 8px;
+    color: white;
+    font-style: italic;
+}
+
+.textoHistoriaContainer {
+    margin-right: 3%;
+}
+
+/* Breakpoint para telas pequenas */
+@media (max-width: 768px) {
+    .sectionContent {
+        flex-direction: column;
+        /* muda para coluna no mobile */
+        text-align: center;
+    }
+
+    .textoHistoria {
+        max-width: 100%;
+        font-size: 14px;
+        /* ocupa a largura total */
+    }
+
+    .btnCardapio {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .containerCarrossel {
+        height: 40vh;
+    }
+
+    .tituloSecao {
+        font-size: 18px;
+        text-wrap: nowrap;
+        font-weight: 400;
+    }
+}
